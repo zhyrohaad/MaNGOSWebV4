@@ -4,7 +4,7 @@
 
 	</style>
 	<div id="module-container">
-		<?php 
+		<?php
 		// Load the banner display type. 1 = internal flash, 2 = external flash (wow.com), 3 is banner
 		$banner = (int)$mwe_config['flash_display_type'];
 		if ($banner == 1)
@@ -13,9 +13,9 @@
 				<embed type="application/x-shockwave-flash" src="modules/flash/loader2.swf" id="flashbanner" name="flashbanner" quality="high" wmode="transparent" base="modules/flash/<?php echo $GLOBALS['user_cur_lang']; ?>" flashvars="xmlname=news.xmls" height="340" width="500">
 			</div>
 				<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<?php 
+		<?php
 		}
-		elseif($banner == 2) 
+		elseif($banner == 2)
 		{ ?>
 			<div id="flashcontainer">
 				<embed type="application/x-shockwave-flash" src="http://www.worldofwarcraft.com/new-hp/flash/loader2.swf" id="flashbanner" name="flashbanner" quality="high" wmode="transparent" base="http://www.worldofwarcraft.com/new-hp/flash/" flashvars="news.xmls" height="340" width="500">
@@ -30,7 +30,7 @@
 				<center><img src="<?php echo $Template['path']; ?>/images/banner.jpg" alt="" width="470"/></center>
 			</div>
 			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-		<?php 
+		<?php
 		} ?>
 	</div>
 	<div class="module-container" style="position: relative;">
@@ -38,26 +38,26 @@
 		if($alltopics != FALSE)
 		{
 			foreach($alltopics as $topic)
-			{ 
+			{
 				$postnum++;
 				if($hl=='alt')
 				{
 					$hl='';
 				}
-				else 
+				else
 				{
 					$hl='alt';
 				}
-				
+
 				if($topic['posted_by'] == 0)
 				{
-					$posted_by['username'] = "Mistvale.com Dev Team";
+					$posted_by['username'] = "Alasiya WoW Dev Team";
 				}
 				else
 				{
 					$posted_by = $RDB->selectRow("SELECT username FROM account WHERE id = '".$topic['posted_by']."'");
 				}
-?>                                                              
+?>
 				<script type="text/javascript">
 					var postId<?php echo $postnum; ?>="<?php echo $topic['id'];?>";
 				</script>
@@ -102,8 +102,8 @@
 											<div class="letter-box0"></div>
 											<div class="blog-post">
 												<?php echo $topic['message'];?>
-												<div align="right"></div>                
-											</div>                
+												<div align="right"></div>
+											</div>
 										</li>
 									</ul>
 								</dd>
@@ -119,14 +119,14 @@
 				var defaultOpen = "<?php echo $mwe_config['module_news_open'];?>";
 				if ((cookieState == 1) || (position==1 && cookieState!='0') || (defaultOpen == 1 && cookieState!='0')) {
 				} else {
-					document.getElementById("news"+localId).className = "news-collapse"+"<?php echo $hl;?>";       
+					document.getElementById("news"+localId).className = "news-collapse"+"<?php echo $hl;?>";
 				}
 				--></script>
-		<?php 
+		<?php
 			}
 			unset($alltopics, $hl, $postnum);
 		}
-	?>                                                                
+	?>
 	</div>
 	<div class="news-archive-link" <?php if ($banner==1) echo 'style="position: relative;"';?>>
 		<div class="news-archive-button">

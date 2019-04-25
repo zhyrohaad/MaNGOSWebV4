@@ -8,7 +8,7 @@
 /* === Page BG's === */
 body { background: #000; color: #000; font-family: arial, helvetica, sans-serif; font-size: 12px; padding: 0; margin: 0; }
 #left-bg { background: url('../images/page_leftbg.png') no-repeat; position: absolute; top: -101px; left: -289px; height: 1026px; width: 478px; }
-#right-bg { background: url('../images/page_rightbg.png') no-repeat; position: absolute; top: -85px; right: -1071px; height: 621px; width: 296px; z-index: -20; }
+/* #right-bg { background: url('../images/page_rightbg.png') no-repeat; position: absolute; top: -85px; right: -1071px; height: 621px; width: 296px; z-index: -20; } */
 /* === END BG === *
 
 /* === Main Nav (Icons in newhp_icons.css) === */
@@ -85,7 +85,7 @@ span.gfxhook { display: block; background: url(../images/plainbox/quicklinks-bot
 div.newcommer { background: url(../images/newcomer_box.jpg) no-repeat 0 0; height: 169px; width: 289px; position: relative; left: 8px; z-index: 2;}
 div.newcommer h4 { font-size: 14px; color: #fff; position: relative; top: 20px; left: 12px; }
 div.newcommer p { position: relative; left: 12px; top: 32px;color: #fff; font-weight: normal; width: 150px;}
-div.newcommer ul, div.newcommer li { margin: 0; padding: 0; } 
+div.newcommer ul, div.newcommer li { margin: 0; padding: 0; }
 div.newcommer ul { position: relative; top: 42px; left: 0; width: 240px; list-style-type: none; }
 div.newcommer a { color: #d0a803; padding-left: 12px; background: url(../images/newcomer_link_bg.png) no-repeat 0 3px; }
 div.newcommer a:hover { color: #fff;  }
